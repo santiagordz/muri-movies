@@ -9,9 +9,11 @@ class MainActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        initializeBinding()
-//        initializeObservers()
-//        initializeListeners()
+        initializeBinding()
     }
 
+    private fun initializeBinding() {
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+    }
 }

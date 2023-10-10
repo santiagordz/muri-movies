@@ -14,7 +14,7 @@ object NetworkModuleDI {
     private val okHttpClient: OkHttpClient = OkHttpClient.Builder()
         .addInterceptor { chain ->
             val request = chain.request().newBuilder()
-                .addHeader("Authorization", "Bearer ${Constants.API_KEY}}")
+                .addHeader("Authorization", "Bearer ${Constants.API_KEY}")
                 .build()
             chain.proceed(request)
         }

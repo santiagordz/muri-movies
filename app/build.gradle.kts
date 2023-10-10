@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace = "com.murimovies"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.murimovies"
-        minSdk = 24
+        minSdk = 21
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"

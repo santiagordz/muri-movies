@@ -17,8 +17,10 @@
         />
 
     <fragment
+        android:id="@+id/nav_host_fragment_content_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:name="com.murimovies.framework.views.MovieListFragment"
         android:layout_below="@+id/appTitle"
     />
 </RelativeLayout>
