@@ -1,6 +1,7 @@
 package com.murimovies.data.remote
 
 import com.murimovies.utils.Constants
+import jp.wasabeef.glide.transformations.BuildConfig
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -13,7 +14,7 @@ object NetworkModuleDI {
     private val okHttpClient: OkHttpClient = OkHttpClient.Builder()
         .addInterceptor { chain ->
             val request = chain.request().newBuilder()
-                .addHeader("Authorization", "Bearer YOUR_ACCESS_TOKEN_HERE")
+                .addHeader("Authorization", "Bearer ${Constants.API_KEY}}")
                 .build()
             chain.proceed(request)
         }
